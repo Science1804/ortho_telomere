@@ -1,0 +1,20 @@
+Single cell has multiple pathways. ~ but associated with one or two major pathways at a point in time ? ~ my assumption
+
+Multiple cells in a speciif tissue go under top pathways, but where are they present in this pathways ? 
+
+A cell space - visualization from t-SNE, ..... its cells 
+
+Are there transitions of cell space ? ~ with respect to maybe pathways ? 
+like two kind of cell types following the same pathway, are clubbed together ...? and if you could restrospect it forward backward- I mean to say .. first visualization and then correlationg with pathway enrichment;
+
+
+
+How are the cells arranged in the pathways space .... ?  ~ pathway space is like the multiverse of cell space .... isn't it .. ? 
+
+What is the benefit of looking at such pathway space .. ? ~ question for biologist .. 
+How are you going to link and define to distinct vector space ... ? - question for a mathematician 
+what do you think relation between two vector space says ... ? - question for a physisct .. 
+
+
+for some reason we are always in a vector space, but would it be better if it'd be a more melliable space .. ? 
+ 
