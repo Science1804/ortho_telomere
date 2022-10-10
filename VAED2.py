@@ -3,9 +3,17 @@ import tensorflow as tf
 " why linear ? - cause its not desined to take matrix based image input rather just an array of shape [ samples x features ]"
 
 
-class VAED2:
+class Sampling(tf.keras.layers.Layer):
+    """Uses (z_mean, z_log_var) to sample z, the vector encoding a digit."""
 
-    class VAE(tf.keras.Model):
+    def call(self, inputs):
+        z_mean, z_log_var = inputs
+        batch = tf.shape(z_mean)[0]
+        dim = tf.shape(z_mean)[1]
+        epsilon = tf.keras.backend.random_normal(shape=(batch, dim))
+        return z_mean + tf.exp(0.5 * z_log_var) * epsilon
+    
+class VAE(tf.keras.Model):
         def __init__(self, encoder, decoder, **kwargs):
             super(VAE, self).__init__(**kwargs)
             self.encoder = encoder
@@ -43,7 +51,8 @@ class VAED2:
                 "kl_loss": self.kl_loss_tracker.result(),
             }
 
-    
+class VAED2:
+
     class Sampling(tf.keras.layers.Layer):
         """Uses (z_mean, z_log_var) to sample z, the vector encoding a digit."""
 
